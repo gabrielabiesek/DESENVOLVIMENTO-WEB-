@@ -205,10 +205,10 @@ criarCookie();
 lerCookie();
 verificarCookie();*/
 
-function criarCookie(nome, valor, expira){
+/*function criarCookie(nome, valor, expira){
     var dtExpira = "expires="+expira;
     document.cookie = nome + "=" + valor + "; " + dtExpira;
-    //cookie final = nomeUsuario=nome; expires= Tue, 01 Jan 2115 12:00:00 UTC 
+    //cookie final = x 
 }
 
 function lerCookie(nome){
@@ -235,27 +235,90 @@ function verificarCookie(){
         alert("Bem vindo novamente " + username);
 
     }else{
-        for(var x = 0; x != listalogin; i++){
-        var login =  prompt("Digite seu nome:");
-        var senha = prompt("Digite sua senha:");
-        for(var i = 0; i < listalogin.length; i++){
-            if(login == listalogin[i] && senha == listasenha[i]){
-                criarCookie("nomeUsuario", login, " Tue, 01 Jan 2115 12:00:00 UTC ");
-            }
+        var x = 1;
+        while(x == 1 ){
+            var login = prompt("Digite seu nome:");
+            var senha = prompt("Digite sua senha:");
+         for(var i = 0; i < listalogin.length; i++){
+                if(login == listalogin[i] && senha == listasenha[i]){
+                    x = 2;
+                    criarCookie("nomeUsuario", login, " Tue, 01 Jan 2115 12:00:00 UTC ");
+                }
         }
-        {
-            criarCookie("nomeUsuario", login, " Tue, 01 Jan 2115 12:00:00 UTC ");
+        if(x == 1){
+            alert("O login ou a senha está incorreto, tente novamente. ");
         }
-        if (login != "" && login != null){
-            criarCookie("nomeUsuario", login, " Tue, 01 Jan 2115 12:00:00 UTC ");
         }
-        for(login != listalogin && senha != listasenha){
-            alert("Usuário ou senha inválidos!");
-        }
-    }
+        
     }
 }
 
 var listalogin = ["Gabriela", "Thaila"];
 var listasenha = ["345", "897"];
+verificarCookie();
+
+//criar uma função para novo cadastro
+function novoUsuario(){
+    var nome = prompt("Digite o nome do novo usuário: ")
+}*/
+
+
+function criarCookie(tabuada, valor, expira){
+    var dtExpira = "expires="+expira;
+    document.cookie = tabuada + "=" + valor + "; " + dtExpira;
+    
+}
+
+function lerCookie(nome){
+    var vnome = nome + "=";
+    //vnome -> nomeUsuario=
+    var ca = document.cookie.split(';');
+    //ca -> nomeUsuario=nome
+    for(var i=0; i<ca.length; i++){
+        var c = ca[i];
+        while(c.charAt(0)==' '){
+            c = c.substring(1);
+        }
+        if(c.indexOf(vnome) == 0)
+            return c.substring(vnome.length,c.length);
+    }
+    return "";
+}
+
+function tabuada(){
+    //var tab = parseInt(prompt("digite um número para ver a tabuada: "));
+    //alert("Tabuada de " + tab);
+    
+    for(var i = 1; i <= 10; i++){
+        resultado = i * tab
+        alert(tab + "X" + i + "=" + resultado)  
+    }
+    return "";
+}
+
+function verificarCookie(){
+    tab = lerCookie("Tabuada");
+    if(tab != ""){
+        alert("A última tabuada vista foi: " + tab);
+        //tabuada();
+    }else{
+        tab = prompt("Digite um número para ver sua tabuada:");
+        if (tab != "" && tab != null){
+            //tabuada();
+            criarCookie("Tabuada", tab, " Tue, 01 Jan 2115 12:00:00 UTC ");
+        }
+    }
+}
+
+function ultimatab(){
+    var tab = tab;
+    tabuada();
+    if (tab != "" && tab != null){
+            tabuada();
+            criarCookie("Tabuada", tab, " Tue, 01 Jan 2115 12:00:00 UTC ");
+        
+}
+}
+
+var tab;
 verificarCookie();
