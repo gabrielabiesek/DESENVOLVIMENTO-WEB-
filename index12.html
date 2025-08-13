@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                background-color: black;
+            }
+            H1{
+                color: white;
+            }
+            h2{
+                color: plum;
+            }
+            h3{
+                color: plum;
+            }
+            p{
+                color: white;
+            }
+            mark{
+                background-color: plum;
+            }
+            code{
+                color: white
+            }
+        </style>
+        
+    </head>
+    <body>
+        <h1 font-family: 'Courier New', Courier, monospace" > Três formas de usar o CSS</h1>
+        <hr>
+        <h2> Primeira forma: definindo na própria variável </h2>
+        <p>
+        É definido dentro da própria variável, chamado de "inline". <br>
+        Normalmente usado quando precisamos editar somente aquela parte do código, sem afetar as demais. <br>
+        <ol type="I" start="1" style="color: plum;"></ol>
+        <mark> Exemplo: </mark> 
+        <code><pre>
+        < h2 style = "color: blue"; ></h2>
+        </pre></code> 
+
+        <hr>
+
+        <h2> Segunda forma: definindo no cabeçalho </h2>
+        <p>
+        É difinido dentro da tag head, chamado de "internal". <br>
+        Normalmente é usado quando definimos um padrão para aquela tag em específico, <br>
+        para não ter muitas repetições desnecessárias dentro do código.
+        <mark> Exemplo:</mark> 
+        <code><pre>
+        h2{
+            color: plum;
+        }
+        </pre></code>
+
+        <hr>
+
+        <h2>Terceira forma: criando um arquivo de CSS</h2>
+        <p>
+        É a forma mais usada, onde criamos um arquivo externo de CSS chamado de <br>
+        "style.css" e deixamos o HTML apenas para a estrutura. 
+        <mark> Exemplo: </mark>
+        <code><pre>
+        < link rel="stylesheet" href="style.css">
+        </pre></code>
+        </p>
+    </body>
+</html

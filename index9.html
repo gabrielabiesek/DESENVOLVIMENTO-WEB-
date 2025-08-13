@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Código</title>
+    </head>
+    <body>
+        <!-- ALUNA: Gabriela biesek -->
+        <pre><code>
+            while (!exit) {
+                const option = prompt("Escolha uma opção:\n1 - Fazer login\n2 - Cadastrar novo usuário\n3 - Sair");
+                    switch (option) {
+                    case "1":
+                        const user1 = prompt("Digite o nome");
+                        const email1 = prompt("Digite um email");
+                        const pass1 = prompt("Digite a senha");
+                        await fazerLogin(user1, email1, pass1);
+                        break;
+                    case "2":
+                        const user2 = prompt("Digite um nome");
+                        const email2 = prompt("Digite um email");
+                        const pass2 = prompt("Digite uma senha");
+                        await registrarUsuario(user2, email2, pass2);
+                        break;
+                    case "3":
+                        console.log("Saindo...");
+                        exit = true;
+                        break;
+                    default:
+                        console.log("Opção inválida.");
+                        break;
+                    }
+                }
+           
+            </code></pre>
+            <h2>Explicação</h2>
+            <p>O código começa executando um while perguntando o que o cliente deseja fazer<br>
+                de acordo com os números, se deseja entrar com login ou cadastrar novo usuário ou sair do programa. Se o cliente escolher <br>
+                um número que não esteja na lista, a pergunta irá aparecer "Opçao inválida" e executará novamente, e caso o número seja um <br>
+                escolhido da lista ele entrara em outra página.</p>
+    </body>
+</html>
+    </body>
+</html>
