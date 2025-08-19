@@ -17,6 +17,9 @@
             h3{
                 color: plum;
             }
+            h4{
+                color: plum;
+            }
             p{
                 color: white;
             }
@@ -26,6 +29,7 @@
             code{
                 color: white
             }
+            
         </style>
         
     </head>
@@ -36,8 +40,15 @@
         <p>
         É definido dentro da própria variável, chamado de "inline". <br>
         Normalmente usado quando precisamos editar somente aquela parte do código, sem afetar as demais. <br>
-        <ol type="I" start="1" style="color: plum;"></ol>
-        <mark> Exemplo: </mark> 
+        <ol type="I" start="0" style="color: plum;"><li><h4>Pontos Positivos:</h4></li>
+        <li>Não é necessário criar e fazer um upload de uma pasta separada como no CSS externo.</li>
+        <li>Aplicação rápida para um elemento específico.</li>
+        <li>Facilita a testagem rápida de algo.</li></ol>
+        <ol type="I" start="0" style="color: plum"><li><h4>Pontos negativos: </h4></li>
+        <li>Dificulta a manutenção e organização</li>
+        <li>Tem muita repetição se usado em muitos elementos</li>
+        <li>Pode gerar arquivos de HTML mais pesados.</li></ol>
+        <mark style="background-color: purple;"> Exemplo: </mark> 
         <code><pre>
         < h2 style = "color: blue"; ></h2>
         </pre></code> 
@@ -49,12 +60,21 @@
         É difinido dentro da tag head, chamado de "internal". <br>
         Normalmente é usado quando definimos um padrão para aquela tag em específico, <br>
         para não ter muitas repetições desnecessárias dentro do código.
-        <mark> Exemplo:</mark> 
+        <ol type="I" start="0" style="color: plum;"><li><h4>Pontos positivos:</h4></li>
+        <li>Facilita a edição.</li>
+        <li>Melhor organização.</li>
+        <li>Define o elemento escolhido em um padrão aplicado para todos.</li></ol>
+        <ol type="I" start="0" style="color: plum;"><li><h4>Pontos negativos:</h4></li>
+        <li>Se houver mais de uma página será necessário fazer a repetição do código CSS em cada uma delas.</li>
+        <li>Aumenta o tamanho do arquivo HTML.</li>
+        <li>Menor desempenho em sites grandes.</li></ol>
+        <mark style="background-color: blueviolet;"> Exemplo:</mark> 
         <code><pre>
         h2{
             color: plum;
         }
         </pre></code>
+
 
         <hr>
 
@@ -62,6 +82,14 @@
         <p>
         É a forma mais usada, onde criamos um arquivo externo de CSS chamado de <br>
         "style.css" e deixamos o HTML apenas para a estrutura. 
+        <ol type="I" start="0" style="color: plum;"><li><h4>Pontos positivos:</h4></li>
+        <li>Separação total do conteúdo e do estilo.</li>
+        <li>Pode ser reutilizado em várias páginas.</li>
+        <li>Fácil manutenção.</li></ol>
+        <ol type="I" start="0" style="color: plum;"><li><h4>Pontos negativos:</h4></li>
+        <li>Menos prático para alterações rápidas.</li>
+        <li>Depende do link correto, já que, se estiver errado a estilização não irá funcionar.</li>
+        <li>Requer carregamento extra.</li></ol>
         <mark> Exemplo: </mark>
         <code><pre>
         < link rel="stylesheet" href="style.css">
