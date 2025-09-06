@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário média</title>
+    </head>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        h3{
+            color: plum;
+        }
+        label{
+            color: plum;
+        }
+
+    </style>
+    <body>
+        <!---Faça um formulário que receba quatro valores e mostre a média--->
+        <form id="media">
+            <label for="num1">1° Número</label>
+            <input type="number" id="num1" required>
+            <p>+</p>
+            <label for="num2">2° Número</label>
+            <input type="number" id="num2" required>
+            <p>+</p>
+            <label for="num3">3° Número</label>
+            <input type="number" id="num3" required>
+            <p>+</p>
+            <label for="num4">4° Número</label>
+            <input type="number" id="num4" required>
+            <button type="submit">Calcular média</button>
+        </form>
+        <br>
+        <hr>
+        <div class="result">
+            <h3>Resultado</h3>
+            <p id="Resultado"></p>
+        </div>
+
+        <script>
+            const form = document.getElementById('media');
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+
+                const Resultado = document.getElementById('Resultado');
+
+                let num1 = document.getElementById('num1').value;
+                let num2 = document.getElementById('num2').value;
+                let num3 = document.getElementById('num3').value;
+                let num4 = document.getElementById('num4').value;
+
+                Resultado.innerText = "A média dos números é: " + ((parseFloat(num1) + parseFloat(num2) + parseFloat(num3) + parseFloat(num4))/4);
+            })
+        </script>
+    </body>
+</html>

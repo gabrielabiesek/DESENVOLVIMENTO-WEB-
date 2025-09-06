@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Paises</title>
+    </head>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+    <body>
+        <form id="Paises">
+            <label for="ps1">Digite um País</label>
+            <input type="text" id="ps1" required>
+            <button type="submit">Verifique a capital</button>
+        </form>
+        <br>
+        <hr>
+
+        <div>
+            <h3>Capital</h3>
+            <p id="Capital"></p>
+        </div>
+
+        <script>
+            const form = document.getElementById('Paises');
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault();
+
+                const Capital = document.getElementById('Capital');
+
+                let ps1 = document.getElementById('ps1').value;
+
+                if(ps1 == "Brasil"){
+                    Capital.innerText = "A capital do Brasil é Brasília!";
+                }
+                if(ps1 == "Colômbia"){
+                    Capital.innerText = "A capital da Colômbia é Bogotá!";
+                }
+                if(ps1 == "Argentina"){
+                    Capital.innerText = "A capital da Argentina é Buenos Aires!";
+                }
+                if(ps1 == "Peru"){
+                    Capital.innerText = "A capital do Peru é Lima!";
+                }
+                if(ps1 == "Venezuela"){
+                    Capital.innerText = "A capital da Venezuela é Caracas!";
+                }
+                if(ps1 == "Chile"){
+                    Capital.innerText = "A capital do Chile é Santiago!";
+                }
+                if(ps1 == "Aruba"){
+                    Capital.innerText = "A capital de Aruba é Oranjestade!";
+                }
+                if(ps1 == "Curaçao"){
+                    Capital.innerText = "A capital de Curaçao é Willemstad!";
+                }
+                if(ps1 == "Equador"){
+                    Capital.innerText = "A capital do Equador é Quito!";
+                }
+                if(ps1 == "Bolívia"){
+                    Capital.innerText = "A capital da Bolívia é Sucre!";
+                }
+                if(ps1 == "Guiana"){
+                    Capital.innerText = "A capital da Guiana é Georgetown!";
+                }
+                if(ps1 == "Uruguai"){
+                    Capital.innerText = "A capital do Uruguai é Montevidéu!";
+                }
+                if(ps1 == "Trindade"){
+                    Capital.innerText = "A capital de Trindade é Port of Spain!";
+                }
+                if(ps1 == "tobago"){
+                    Capital.innerText = "A capital de Tobago é Port of Spain!";
+                }
+                if(ps1 == "Suriname"){
+                    Capital.innerText = "A capital do Suriname é Paramaribo!";
+                }
+                if(ps1 == "Paraguai"){
+                    Capital.innerText = "A capital do Paraguai é Assunção!";
+                }
+                if(ps1 == "GuianaFrancesa"){
+                    Capital.innerText = "A capital da Guiana Francesa é Caiena!";
+                }
+                else("Esse País não está registrado ou não pertence a América do sul!");
+
+            });
+        </script>
+    </body>
+</html>

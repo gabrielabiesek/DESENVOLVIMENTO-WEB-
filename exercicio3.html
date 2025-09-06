@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Palavra/arvalaP</title>
+    </head>
+    <body>
+        <form id="Palavra">
+            <label for="palvra">Insira a palavra de sua preferência: </label>
+            <input type="text" id="palavra">
+            <button type="submit">Inverter palavra</button>
+        </form>
+        <br>
+        <hr>
+         
+        <div>
+            <h3>Invertida</h3>
+            <p id="Invertida"></p>
+        </div>
+
+        <script>
+            const form = document.getElementById('Palavra');
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault(); 
+
+                const Invertida = document.getElementById('Invertida');
+
+                let palavra1 = document.getElementById('palavra').value;
+
+                let invertida = palavra1.split('').reverse().join('');
+
+                Invertida.innerText = "A palvra invertida é: " + invertida;
+            
+            });
+        </script>
+    </body>
+</html>

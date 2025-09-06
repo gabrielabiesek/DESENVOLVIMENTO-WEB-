@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário votação</title>
+    </head>
+    <body>
+        <!-- Utilizando a tag <input> receba uma idade e diga se a pessoa está em idade de votação
+        facultativa, obrigatória ou dispensada-->
+
+        <form id="idade">
+            <label for="id1">Insira sua idade: </label>
+            <input type="number" id="id1">
+            <button type="submit">Verificar idade</button>
+        </form>
+
+        <br>
+        <hr>
+
+        <div>
+            <h3>Verificar idade</h3>
+            <p id="Verif"></p>
+        </div>
+
+        <script>
+            const form = document.getElementById('idade');
+
+            form.addEventListener('submit', function(event){
+                event.preventDefault();  
+
+                const Verif = document.getElementById('Verif');
+
+                let id1 = document.getElementById('id1').value;
+                
+                if(id1 < 16){
+                    Verif.innerText = "Você está DISPENSADO!";
+                }
+                if(id1 == 16 && id1 == 17){
+                    Verif.innerText = "Você faz parte do grupo FACULTATIVO!";
+                }
+                if(id1 > 18 && id1 < 70 ){
+                    Verif.innerText = "Você faz parte do grupo OBRIGATÓRIO!";
+                }
+                if(id1 > 70){
+                    Verif.innerText = "Você está DISPENSADO!"
+                }
+                
+            });
+            
+        </script>
+    </body>
+</html>
